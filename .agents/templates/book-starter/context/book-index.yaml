@@ -1,0 +1,93 @@
+# Book state index. Small on purpose: skills read this instead of the manuscript.
+# Updated by the chief editor after every skill run.
+# Status lifecycle: stub -> drafted -> edited -> final
+
+book:
+  slug: {{slug}}
+  title: "{{title}}"
+  subtitle: "{{subtitle}}"
+  author: "{{author}}"
+  language: {{language}}
+  rights: "Copyright (c) {{year}} {{author}}. All rights reserved."
+  publisher: "{{publisher}}"
+  site: null                          # blog/site URL if repurposing is on; seeds the EPUB identifier
+  isbn_ebook: null
+  reader: "{{reader}}"
+  promise: "{{promise}}"
+
+framework:                            # see BOOK_SPEC.md Checkpoint 4 and .agents/rules/chapter-templates.md
+  structure: {{framework_structure}}
+  chapter_unit: {{framework_unit}}
+  layer: {{framework_layer}}
+  outlining: null                     # braindump, or null
+  templates: []                       # template ids used by chapters
+
+# Read by booktools. Trim, ink/paper, page ceiling and word target come from the interview.
+# Every printer value stays null until booktools prints AGENT ACTION REQUIRED; then the chief editor looks it up
+# in the printer's current documentation, confirms it with the author, and records specs_source + specs_verified.
+production:
+  trim: {width_in: null, height_in: null}
+  interior: {ink: null, paper: null}  # e.g. bw / white
+  page_ceiling: null                  # build exits 3 if exceeded
+  word_target: null
+  budget_tolerance: 0.10
+  epub:
+    css: kindle.css                   # library default; or a project-relative path
+    cover: null                       # default: assets/cover/ebook-cover.jpg|png
+  print_targets:                      # one block per printer; key = --target name. Remove printers not used.
+    kdp:
+      label: "Amazon KDP"
+      css: pod_kdp.css
+      margins_in: {top: null, bottom: null, inside: null, outside: null}
+      bleed_in: null
+      spine_in_per_page: null
+      safe_in: null
+      spine_safe_in: null
+      spine_text_min_pages: null
+      spine_text_min_in: null
+      barcode_in: [null, null]
+      min_pages: null
+      even_pages: true
+      specs_source: null
+      specs_verified: null
+    ingram:
+      label: "IngramSpark"
+      css: pod_ingram.css
+      margins_in: {top: null, bottom: null, inside: null, outside: null}
+      bleed_in: null
+      spine_in_per_page: null
+      safe_in: null
+      spine_safe_in: null
+      spine_text_min_pages: null
+      spine_text_min_in: null
+      barcode_in: [null, null]
+      min_pages: null
+      even_pages: true
+      specs_source: null
+      specs_verified: null
+
+# Local research library (booktools research ...). Model values are roles from the suite's MODELS.md.
+research:
+  endpoint: http://localhost:1235/v1  # LM Studio server
+  models: {embed: embed.book, extractor: local.extractor, judge: local.judge}
+  citation_style: chicago-notes-bibliography
+  judge_min_score: 2                  # passages scored below this are never citable
+
+totals:
+  drafted_words: 0
+  chapters_drafted: 0
+  chapters_final: 0
+  blog_posts: 0
+
+build:
+  last_target: null
+  last_page_count: null
+  last_word_count: null
+  last_build: null
+  last_epub: null
+  last_epub_size_kb: null
+
+cover:                                # filled from `booktools spine` output, one key per printer
+  last_calculated: null
+
+chapters: []                          # written at generation; one entry per manuscript file

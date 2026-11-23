@@ -1,0 +1,18 @@
+placeholders:          # name: description. Each is used as {{name}} in template text files.
+  title: "Book title"
+  subtitle: "Book subtitle (use a working subtitle if not final)"
+  slug: "folder and file slug, lowercase-hyphen"
+  author: "Author name as printed on the cover"
+  author_role: "Who is talking: the author's standing to write this book, one phrase"
+  publisher: "Publisher or imprint name (often the author's own name)"
+  language: "Book language as a BCP 47 tag, e.g. en-US"
+  year: "Copyright year, YYYY"
+  created: "Scaffold date, YYYY-MM-DD"
+  reader: "The target reader, one phrase"
+  promise: "What the reader can do after the book, one phrase"
+  framework_structure: "Structure framework id, e.g. problem-solution"
+  framework_unit: "Chapter unit template id, e.g. lesson"
+  framework_layer: "Story/evidence layer id, or none"
+optional:              # flag: template-relative paths (files or folders) deleted when the flag is false
+  repurpose_blogs: [".agents/rules/blog-repurposing-rules.md", ".agents/skills/repurpose-blogs", "blog-exports"]
+  braindump: [".agents/skills/outline-from-braindump"]

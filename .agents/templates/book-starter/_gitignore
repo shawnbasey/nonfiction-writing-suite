@@ -1,0 +1,32 @@
+# Harness & agent files (kept locally, not in the book repo;
+# build tools live in the shared library ../book-tools)
+.agents/
+.claude/
+AGENTS.md
+CLAUDE.md
+
+# Build output (folder kept via .gitkeep; snapshots go to the `builds` branch)
+dist/*
+!dist/.gitkeep
+
+# Research library (rebuilt from research/inbox + urls.txt with `booktools research ingest`)
+research/library.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Temp
+*.tmp
+~$*
+
+# Raw audio (recordings stay local; commit text transcripts only)
+*.m4a
+*.mp3
+*.wav
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store

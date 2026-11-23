@@ -1,0 +1,17 @@
+# Bibliographic metadata for research sources. `booktools research ingest` appends a draft entry per new source.
+# Check each entry against the source itself, fix it, then set verified: true. Unverified sources are flagged by
+# `booktools research status` and refused by `booktools research bibliography --strict`.
+#
+# Schema (one entry per source):
+#   - key: smith2024habits          # citation key used in the manuscript as [@smith2024habits, p. 12]
+#     file: research/inbox/smith-habits.pdf   # the local copy (or)
+#     url: https://example.org/article        # the page it came from
+#     verified: false               # true only after a person checked the csl fields
+#     csl:                          # CSL-JSON fields pandoc uses for the Chicago notes and bibliography
+#       type: book                  # book | article-journal | chapter | report | webpage | ...
+#       title: "Title of the Work"
+#       author: [{family: Smith, given: Jane}]
+#       issued: {date-parts: [[2024]]}
+#       publisher: "Publisher Name"
+#       URL: https://example.org/article
+sources: []

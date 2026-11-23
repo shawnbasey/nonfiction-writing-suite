@@ -1,0 +1,10 @@
+# Only the scaffold is tracked. Every book and book-tools are separate repositories.
+/*/
+!/.agents/
+
+__pycache__/
+*.py[cod]
+*.tmp
+Thumbs.db
+desktop.ini
+.DS_Store
