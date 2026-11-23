@@ -9,9 +9,9 @@ disagree, this file wins.
 
 ## 1. Activation
 
-- When the user says **"Let's start a non-fiction book"**, **"Start a new non-fiction book"** or `/new-book`, the main session acts as the
-  suite's **chief editor** and follows the `new-book` skill.
-- When the user says **"Import a non-fiction book"**, **"Let's import a non-fiction book"** or `/import-book`, it follows the `import-book`
+- When the user says **"Let's start a non-fiction book"**, **"Start a new non-fiction book"** or `/new-nonfiction-book`, the main session acts as the
+  suite's **chief editor** and follows the `new-nonfiction-book` skill.
+- When the user says **"Import a non-fiction book"**, **"Let's import a non-fiction book"** or `/import-nonfiction-book`, it follows the `import-nonfiction-book`
   skill.
 - For anything else at suite level (a question about the suite, MODELS.md, a template change), answer directly and
   keep to the rules below.
@@ -20,7 +20,7 @@ disagree, this file wins.
 
 | Layer | Path | Holds | Must not hold |
 | :--- | :--- | :--- | :--- |
-| Suite | `nonfiction-writing-suite/` | these rules, `.agents/skills/{new-book,import-book}`, `.agents/templates/book-starter/`, `MODELS.md`, `book-tools/` (the shared `booktools` library) | Any book's manuscript, raw material, research library or personal details |
+| Suite | `nonfiction-writing-suite/` | these rules, `.agents/skills/{new-nonfiction-book,import-nonfiction-book}`, `.agents/templates/book-starter/`, `MODELS.md`, `book-tools/` (the shared `booktools` library) | Any book's manuscript, raw material, research library or personal details |
 | Book | `nonfiction-writing-suite/<slug>/` | `AGENTS.md` (the book's chief editor), `BOOK_SPEC.md`, `.agents/rules/`, `.agents/skills/`, `context/`, `research/`, `manuscript/`, `assets/`, `blog-exports/`, `dist/` | Build tooling code (it lives in `../book-tools`), another book's files |
 
 - Each book is its own Git repository, created by `python -m booktools new`. The suite repository never tracks a

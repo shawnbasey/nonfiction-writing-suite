@@ -1,17 +1,17 @@
 ---
-name: import-book
-description: "Bring an existing manuscript folder into the suite: infer its structure framework from the existing table of contents, confirm it with the author, then generate a book harness with booktools new and move the chapters in. Use when the user says \"Import a non-fiction book\", \"Let's import a non-fiction book\" or /import-book."
+name: import-nonfiction-book
+description: "Bring an existing manuscript folder into the suite: infer its structure framework from the existing table of contents, confirm it with the author, then generate a book harness with booktools new and move the chapters in. Use when the user says \"Import a non-fiction book\", \"Let's import a non-fiction book\" or /import-nonfiction-book."
 ---
 
 # Skill: Import an Existing Book
 
 You are the suite's **chief editor** (rules: `.agents/rules/AGENTS.md`), in the main session. Same generator as
-`new-book`, no full interview: you read what exists, infer the framework, and confirm it.
+`new-nonfiction-book`, no full interview: you read what exists, infer the framework, and confirm it.
 
-**Reference files** (from the `new-book` skill; load only at the step that needs them):
-- `../new-book/references/frameworks.md`: framework signatures and chapter templates (step 3).
-- `../new-book/references/interview.md`: only the stages whose answers can't be inferred (step 4).
-- `../new-book/references/harness-generation.md`: `vars.yaml`, `booktools new`, generated files (steps 6-8).
+**Reference files** (from the `new-nonfiction-book` skill; load only at the step that needs them):
+- `../new-nonfiction-book/references/frameworks.md`: framework signatures and chapter templates (step 3).
+- `../new-nonfiction-book/references/interview.md`: only the stages whose answers can't be inferred (step 4).
+- `../new-nonfiction-book/references/harness-generation.md`: `vars.yaml`, `booktools new`, generated files (steps 6-8).
 
 ## Steps
 

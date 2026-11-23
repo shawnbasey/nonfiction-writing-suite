@@ -9,9 +9,9 @@ Antigravity loads the suite rules on its own. Claude Code loads them through thi
 The suite's skills use Antigravity's layout (`.agents/skills/<name>/SKILL.md`), which Claude Code does not
 discover by itself. Use them by reading the file:
 
-- **"Let's start a non-fiction book"**, **"Start a new non-fiction book"** or `/new-book`: read `.agents/skills/new-book/SKILL.md` and
+- **"Let's start a non-fiction book"**, **"Start a new non-fiction book"** or `/new-nonfiction-book`: read `.agents/skills/new-nonfiction-book/SKILL.md` and
   follow it as the chief editor.
-- **"Import a non-fiction book"** or `/import-book`: read `.agents/skills/import-book/SKILL.md` and follow it.
+- **"Import a non-fiction book"** or `/import-nonfiction-book`: read `.agents/skills/import-nonfiction-book/SKILL.md` and follow it.
 - Load a skill's `references/` files only at the step that names them.
 
 ## Claude Code specifics

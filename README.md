@@ -15,15 +15,15 @@ companion library [book-tools](https://github.com/shawnbasey/book-tools).
 | Path | What it is |
 |---|---|
 | `.agents/rules/AGENTS.md` | Suite rules (always on): the suite and book layers, activation phrases, and the chief editor's role. |
-| `.agents/skills/new-book/` | The onboarding skill: a five-stage interview → `BOOK_SPEC.md` → `booktools new` → framework-specific files. |
-| `.agents/skills/new-book/references/frameworks.md` | Ten nonfiction frameworks with arcs, chapter templates, word-budget splits, evidence needs, and how to combine them. |
-| `.agents/skills/new-book/references/interview.md` | The interview: 2–3 questions per turn, each with a recommended default. |
-| `.agents/skills/new-book/references/harness-generation.md` | How the agreed framework becomes chapter templates, a voice rule, the book index, and manuscript stubs. |
-| `.agents/skills/import-book/` | Brings an existing manuscript into the scaffold (it infers the framework from the TOC). |
+| `.agents/skills/new-nonfiction-book/` | The onboarding skill: a five-stage interview → `BOOK_SPEC.md` → `booktools new` → framework-specific files. |
+| `.agents/skills/new-nonfiction-book/references/frameworks.md` | Ten nonfiction frameworks with arcs, chapter templates, word-budget splits, evidence needs, and how to combine them. |
+| `.agents/skills/new-nonfiction-book/references/interview.md` | The interview: 2–3 questions per turn, each with a recommended default. |
+| `.agents/skills/new-nonfiction-book/references/harness-generation.md` | How the agreed framework becomes chapter templates, a voice rule, the book index, and manuscript stubs. |
+| `.agents/skills/import-nonfiction-book/` | Brings an existing manuscript into the scaffold (it infers the framework from the TOC). |
 | `.agents/templates/book-starter/` | The book template used by `booktools new` (`template.yaml` lists its placeholders and optional parts). |
 | `MODELS.md` | Local model roles (`embed.book`, `local.extractor`, `local.judge`, ...) mapped to model ids. Change a model here and every book follows. |
 | `GEMINI.md` | Pointer for Antigravity sessions opened on this folder. |
-| `CLAUDE.md` | Claude Code entry point: imports the suite rules and maps "Let's start a non-fiction book" to the `new-book` skill. Every generated book gets its own `CLAUDE.md` too. |
+| `CLAUDE.md` | Claude Code entry point: imports the suite rules and maps "Let's start a non-fiction book" to the `new-nonfiction-book` skill. Every generated book gets its own `CLAUDE.md` too. |
 
 ## The frameworks
 

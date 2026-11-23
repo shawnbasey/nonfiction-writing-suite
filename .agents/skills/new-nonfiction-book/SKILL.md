@@ -1,6 +1,6 @@
 ---
-name: new-book
-description: "Start a new nonfiction book: interview the author, agree a structure framework, read back BOOK_SPEC.md, then generate a tailored book harness from the book-starter template with booktools new. Use when the user says \"Let's start a non-fiction book\", \"Start a new non-fiction book\" or /new-book."
+name: new-nonfiction-book
+description: "Start a new nonfiction book: interview the author, agree a structure framework, read back BOOK_SPEC.md, then generate a tailored book harness from the book-starter template with booktools new. Use when the user says \"Let's start a non-fiction book\", \"Start a new non-fiction book\" or /new-nonfiction-book."
 ---
 
 # Skill: Start a New Book
