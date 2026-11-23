@@ -9,9 +9,9 @@ disagree, this file wins.
 
 ## 1. Activation
 
-- When the user says **"Let's start a book"**, **"Start a new book"** or `/new-book`, the main session acts as the
+- When the user says **"Let's start a non-fiction book"**, **"Start a new non-fiction book"** or `/new-book`, the main session acts as the
   suite's **chief editor** and follows the `new-book` skill.
-- When the user says **"Import a book"**, **"Let's import a book"** or `/import-book`, it follows the `import-book`
+- When the user says **"Import a non-fiction book"**, **"Let's import a non-fiction book"** or `/import-book`, it follows the `import-book`
   skill.
 - For anything else at suite level (a question about the suite, MODELS.md, a template change), answer directly and
   keep to the rules below.

@@ -1,6 +1,6 @@
 ---
 name: import-book
-description: "Bring an existing manuscript folder into the suite: infer its structure framework from the existing table of contents, confirm it with the author, then generate a book harness with booktools new and move the chapters in. Use when the user says \"Import a book\", \"Let's import a book\" or /import-book."
+description: "Bring an existing manuscript folder into the suite: infer its structure framework from the existing table of contents, confirm it with the author, then generate a book harness with booktools new and move the chapters in. Use when the user says \"Import a non-fiction book\", \"Let's import a non-fiction book\" or /import-book."
 ---
 
 # Skill: Import an Existing Book

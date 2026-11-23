@@ -1,6 +1,6 @@
 # Nonfiction Writing Suite
 
-**A projects folder for writing nonfiction books with AI agents.** Say *"Let's start a book"*. A
+**A projects folder for writing nonfiction books with AI agents.** Say *"Let's start a non-fiction book"*. A
 chief-editor agent interviews you about the book and agrees a structure framework with you, then
 generates a book harness tailored to that framework. The harness includes rules, skills, a
 manuscript skeleton, production settings, and a local research library that cites its sources.
@@ -23,7 +23,7 @@ companion library [book-tools](https://github.com/shawnbasey/book-tools).
 | `.agents/templates/book-starter/` | The book template used by `booktools new` (`template.yaml` lists its placeholders and optional parts). |
 | `MODELS.md` | Local model roles (`embed.book`, `local.extractor`, `local.judge`, ...) mapped to model ids. Change a model here and every book follows. |
 | `GEMINI.md` | Pointer for Antigravity sessions opened on this folder. |
-| `CLAUDE.md` | Claude Code entry point: imports the suite rules and maps "Let's start a book" to the `new-book` skill. Every generated book gets its own `CLAUDE.md` too. |
+| `CLAUDE.md` | Claude Code entry point: imports the suite rules and maps "Let's start a non-fiction book" to the `new-book` skill. Every generated book gets its own `CLAUDE.md` too. |
 
 ## The frameworks
 
@@ -62,7 +62,7 @@ python -m booktools doctor
   models named in `MODELS.md`, and the server running. Set each book's port in its
   `research.endpoint`.
 
-Then open this folder in your agent and say **"Let's start a book"**. When onboarding finishes, open
+Then open this folder in your agent and say **"Let's start a non-fiction book"**. When onboarding finishes, open
 the new book's own folder to work on it. Its rules and skills load only from there.
 
 ## Layout on disk
