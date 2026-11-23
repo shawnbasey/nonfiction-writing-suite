@@ -5,8 +5,9 @@ chief-editor agent interviews you about the book and agrees a structure framewor
 generates a book harness tailored to that framework. The harness includes rules, skills, a
 manuscript skeleton, production settings, and a local research library that cites its sources.
 
-It works in Google Antigravity (it uses `.agents/rules`, `.agents/skills` and `AGENTS.md`) and in
-any agent that can read those files and run a shell. Builds, research and citations come from the
+It works in Google Antigravity, which reads `.agents/rules`, `.agents/skills` and `AGENTS.md`
+natively. It also works in Claude Code, where `CLAUDE.md` imports the same rules and points to the
+skills. Any agent that can read those files and run a shell can use it. Builds, research and citations come from the
 companion library [book-tools](https://github.com/shawnbasey/book-tools).
 
 ## What's inside
@@ -22,6 +23,7 @@ companion library [book-tools](https://github.com/shawnbasey/book-tools).
 | `.agents/templates/book-starter/` | The book template used by `booktools new` (`template.yaml` lists its placeholders and optional parts). |
 | `MODELS.md` | Local model roles (`embed.book`, `local.extractor`, `local.judge`, ...) mapped to model ids. Change a model here and every book follows. |
 | `GEMINI.md` | Pointer for Antigravity sessions opened on this folder. |
+| `CLAUDE.md` | Claude Code entry point: imports the suite rules and maps "Let's start a book" to the `new-book` skill. Every generated book gets its own `CLAUDE.md` too. |
 
 ## The frameworks
 
